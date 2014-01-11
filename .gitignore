@@ -1,0 +1,5 @@
+# For CVI by 40tude
+**/*.exe
+**/cvibuild.*/
+*.zip
+test/*
