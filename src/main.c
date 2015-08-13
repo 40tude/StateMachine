@@ -4,6 +4,8 @@
 #include "../assets/frontend.h"
 #include "statemachine.h"  
 
+// Ajout d'un commentaire pour voir si le commit marche bien
+
 // ----------------------------------------------------------------------------
 #define MAX_LINE_LEN          1024          
 #define PARSER_ERROR_MSG_LEN  MAX_PATHNAME_LEN + 100
