@@ -4,9 +4,6 @@
 #include "../assets/frontend.h"
 #include "statemachine.h"  
 
-// Ajout d'un commentaire pour voir si le commit marche bien
-// Un autre commentaire sur la machne Win10 où posh-git ne montre pas [master] dans powershell
-
 // ----------------------------------------------------------------------------
 #define MAX_LINE_LEN          1024          
 #define PARSER_ERROR_MSG_LEN  MAX_PATHNAME_LEN + 100
@@ -17,7 +14,7 @@ static int Parse(const char SourceFilename[], int *CommentCount, char ErrorMessa
 //-----------------------------------------------------------------------------
 int main(){
   
-  if (InitCVIRTE(0, 0, 0) == 0) return -1;	/* out of memory */
+  if (InitCVIRTE(0, 0, 0) == 0) return -1;	                                    // make sure to have this line of code with an external compiler (msvc for example)
   int hPanel = LoadPanel (0, "../../assets/frontend.uir", PANEL);
   if (hPanel<0) return -1;
   
@@ -40,12 +37,11 @@ int CVICALLBACK QuitCallback (int panel, int control, int event, void *callbackD
 
 //-----------------------------------------------------------------------------
 int CVICALLBACK OnSelect (int panel, int control, int event, void *callbackData, int eventData1, int eventData2) {
-  
-  static char SourceFilename[MAX_PATHNAME_LEN];
-  int  Err;
 
   switch (event) {
     case EVENT_COMMIT:
+      static char SourceFilename[MAX_PATHNAME_LEN];
+      int  Err;
       Err = FileSelectPopup ("../src", "*.c", "*.c;*.h", "Select a file", VAL_SELECT_BUTTON, 0, 0, 1, 0, SourceFilename);
 
       if(Err == VAL_EXISTING_FILE_SELECTED){
@@ -75,25 +71,19 @@ int CVICALLBACK OnSelect (int panel, int control, int event, void *callbackData,
 //-----------------------------------------------------------------------------
 static int Parse(const char SourceFilename[], int *CommentCount, char ErrorMessage[]){
 
-  // stay in a loop reading lines from the source file
-  FILE *hFile = fopen(SourceFilename, "r");
+  
+  FILE *hFile = fopen(SourceFilename, "r");                                     // stay in a loop reading lines from the source file
   if (hFile!=-1){
+    *CommentCount = 0;                                                          // just to make sure we start to count from 0
     
-    // just to make sure we start to count from 0
-    *CommentCount = 0;
-
-    // stay in a loop reading characters from the line
-    static char   line[MAX_LINE_LEN+1];     
-    
+    static char   line[MAX_LINE_LEN+1];                                         // stay in a loop reading characters from the line
     char *NoErr = fgets (line, sizeof(line)-1, hFile);
     while(NoErr){
       KEY_STATE     ks      = S0;        
-      //unsigned int LineNo        = 0;  
       unsigned int Column = 0;
       while (line[Column]){
-        // given the current state, and this input, 
-        // what's the next state?
-        KEY_STATE ks_next = GetState(ks, line[Column]);
+                                                                                // given the current state, and this input, 
+        KEY_STATE ks_next = GetState(ks, line[Column]);                         // what's the next state?
 
         //-----------------------------------------------------------
         // Requirement 1:
@@ -117,9 +107,8 @@ static int Parse(const char SourceFilename[], int *CommentCount, char ErrorMessa
         // "Any input value that starts you in S3 and keeps you in S3
         // should be counted as a comment byte." (e.g. "/* ... ***/"):
         if ((S3 == ks_next) && (S3 == ks)) *CommentCount= *CommentCount +1;
-
-        // enter the next state:
-        ks = ks_next;
+        
+        ks = ks_next;                                                           // enter the next state:
         Column++;
       }
       NoErr = fgets (line, sizeof(line)-1, hFile);   
