@@ -1,6 +1,6 @@
 [Workspace Header]
-Version = 1300
-Pathname = "/c/Users/frbaucop/Documents/Perso/CVI/StateMachine/cvi2013/StateMachine.cws"
+Version = 1302
+Pathname = "/c/Users/frbaucop/Source/Repos/StateMachine/cvi2013/StateMachine.cws"
 CVI Dir = "/c/program files (x86)/national instruments/cvi2013"
 CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
 CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2013"
@@ -12,11 +12,11 @@ VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
 Project 0001 = "StateMachine.prj"
-Drag Bar Left = 232
+Drag Bar Left = 211
 Window Top = 142
-Window Left = 174
-Window Bottom = 955
-Window Right = 1451
+Window Left = 259
+Window Bottom = 942
+Window Right = 1188
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -32,12 +32,12 @@ Break At First Statement = False
 Sort Type = "File Name"
 Number of Opened Files = 5
 Window Confinement Region Enabled = True
-MainColumnWidth = 215
+MainColumnWidth = 194
 FileDateColumnWidth = 70
 FileSizeColumnWidth = 70
 
 [Project Header 0001]
-Version = 1300
+Version = 1302
 Don't Update DistKit = False
 Platform Code = 4
 Build Configuration = "Debug"
@@ -46,20 +46,20 @@ Batch Build Release = False
 Batch Build Debug = False
 
 [File 0001]
-Path = "/c/Users/frbaucop/Documents/Perso/CVI/StateMachine/assets/frontend.uir"
+Path = "/c/Users/frbaucop/Source/Repos/StateMachine/assets/frontend.uir"
 File Type = "User Interface Resource"
-Disk Date = 3472312097
+Disk Date = 3522314917
 In Projects = "1,"
 Window Top = 62
 Window Left = 26
 Window Height = 386
 Window Width = 574
-Window Z-Order = 2
+Window Z-Order = 3
 
 [File 0002]
-Path = "/c/Users/frbaucop/Documents/Perso/CVI/StateMachine/src/statemachine.c"
+Path = "/c/Users/frbaucop/Source/Repos/StateMachine/src/statemachine.c"
 File Type = "CSource"
-Disk Date = 3472307406
+Disk Date = 3522314917
 In Projects = "1,"
 Window Top = 92
 Window Left = 42
@@ -67,24 +67,39 @@ Window Z-Order = 5
 Source Window State = "1,5,5,5,10,13,13,1,0,72,0,0,0,0,0,24,0,0,5,22,386,574,1,0,"
 
 [File 0003]
-Path = "/c/Users/frbaucop/Documents/Perso/CVI/StateMachine/src/main.c"
+Path = "/c/Users/frbaucop/Source/Repos/StateMachine/src/main.c"
 File Type = "CSource"
-Disk Date = 3472310783
+Disk Date = 3522316553
 In Projects = "1,"
 Window Top = 32
 Window Left = 10
-Window Z-Order = 1
-Source Window State = "1,53,53,53,51,82,51,1,0,232,0,0,0,0,0,39,90,0,128,33,401,574,1,0,"
+Window Z-Order = 2
+Source Window State = "1,53,53,53,51,82,51,1,0,72,0,0,0,0,0,25,0,0,3,16,401,574,1,0,"
 
 [File 0004]
-Path = "/c/Users/frbaucop/Documents/Perso/CVI/StateMachine/src/statemachine.h"
+Path = "/c/Users/frbaucop/Source/Repos/StateMachine/src/statemachine.h"
 File Type = "Include"
-Disk Date = 3472307718
+Disk Date = 3522314917
 In Projects = ""
 Window Top = 32
 Window Left = 10
 Window Z-Order = 4
 Source Window State = "1,0,0,0,3,6,6,1,0,80,0,0,0,0,0,25,1,0,1,15,401,630,1,0,"
+
+[File 0005]
+Path = "/c/Users/frbaucop/Documents/Perso/2015/CVI/CVI & MSVC 2/src/TestCVIMSVC.c"
+File Type = "CSource"
+Disk Date = 3522119312
+In Projects = ""
+Window Z-Order = 1
+Source Window State = "1,16,16,16,0,66,0,0,3,235,0,0,0,0,0,59,0,0,16,66,400,600,0,0,"
+
+[Tab Order]
+Tab 0001 = "/c/Users/frbaucop/Source/Repos/StateMachine/src/statemachine.c"
+Tab 0002 = "/c/Users/frbaucop/Source/Repos/StateMachine/src/statemachine.h"
+Tab 0003 = "/c/Users/frbaucop/Source/Repos/StateMachine/assets/frontend.uir"
+Tab 0004 = "/c/Users/frbaucop/Source/Repos/StateMachine/src/main.c"
+Tab 0005 = "/c/Users/frbaucop/Documents/Perso/2015/CVI/CVI & MSVC 2/src/TestCVIMSVC.c"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
