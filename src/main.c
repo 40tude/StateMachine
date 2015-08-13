@@ -5,6 +5,7 @@
 #include "statemachine.h"  
 
 // Ajout d'un commentaire pour voir si le commit marche bien
+// Un autre commentaire sur la machne Win10 où posh-git ne montre pas [master] dans powershell
 
 // ----------------------------------------------------------------------------
 #define MAX_LINE_LEN          1024          
