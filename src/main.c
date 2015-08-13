@@ -14,7 +14,8 @@ static int Parse(const char SourceFilename[], int *CommentCount, char ErrorMessa
 //-----------------------------------------------------------------------------
 int main(){
   
-  int hPanel = LoadPanel (0, "../assets/frontend.uir", PANEL);
+  if (InitCVIRTE(0, 0, 0) == 0) return -1;	/* out of memory */
+  int hPanel = LoadPanel (0, "../../assets/frontend.uir", PANEL);
   if (hPanel<0) return -1;
   
   DisplayPanel (hPanel);
@@ -37,10 +38,11 @@ int CVICALLBACK QuitCallback (int panel, int control, int event, void *callbackD
 //-----------------------------------------------------------------------------
 int CVICALLBACK OnSelect (int panel, int control, int event, void *callbackData, int eventData1, int eventData2) {
   
+  static char SourceFilename[MAX_PATHNAME_LEN];
+  int  Err;
+
   switch (event) {
     case EVENT_COMMIT:
-      static char SourceFilename[MAX_PATHNAME_LEN];   
-      int         Err;       
       Err = FileSelectPopup ("../src", "*.c", "*.c;*.h", "Select a file", VAL_SELECT_BUTTON, 0, 0, 1, 0, SourceFilename);
 
       if(Err == VAL_EXISTING_FILE_SELECTED){
