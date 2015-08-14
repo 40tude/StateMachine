@@ -69,12 +69,12 @@ Source Window State = "1,5,5,5,10,13,13,1,0,72,0,0,0,0,0,24,0,0,5,22,386,574,1,0
 [File 0003]
 Path = "/c/Users/frbaucop/Source/Repos/StateMachine/src/main.c"
 File Type = "CSource"
-Disk Date = 3522316553
+Disk Date = 3522316794
 In Projects = "1,"
 Window Top = 32
 Window Left = 10
-Window Z-Order = 2
-Source Window State = "1,53,53,53,51,82,51,1,0,72,0,0,0,0,0,25,0,0,3,16,401,574,1,0,"
+Window Z-Order = 1
+Source Window State = "1,53,53,53,51,82,51,1,0,235,0,0,0,0,0,59,0,0,3,16,401,574,1,0,"
 
 [File 0004]
 Path = "/c/Users/frbaucop/Source/Repos/StateMachine/src/statemachine.h"
@@ -91,15 +91,17 @@ Path = "/c/Users/frbaucop/Documents/Perso/2015/CVI/CVI & MSVC 2/src/TestCVIMSVC.
 File Type = "CSource"
 Disk Date = 3522119312
 In Projects = ""
-Window Z-Order = 1
-Source Window State = "1,16,16,16,0,66,0,0,3,235,0,0,0,0,0,59,0,0,16,66,400,600,0,0,"
+Window Top = 95
+Window Left = 42
+Window Z-Order = 2
+Source Window State = "1,16,16,16,0,66,0,0,3,97,0,0,0,0,0,25,0,0,16,66,401,749,1,0,"
 
 [Tab Order]
 Tab 0001 = "/c/Users/frbaucop/Source/Repos/StateMachine/src/statemachine.c"
 Tab 0002 = "/c/Users/frbaucop/Source/Repos/StateMachine/src/statemachine.h"
 Tab 0003 = "/c/Users/frbaucop/Source/Repos/StateMachine/assets/frontend.uir"
-Tab 0004 = "/c/Users/frbaucop/Source/Repos/StateMachine/src/main.c"
-Tab 0005 = "/c/Users/frbaucop/Documents/Perso/2015/CVI/CVI & MSVC 2/src/TestCVIMSVC.c"
+Tab 0004 = "/c/Users/frbaucop/Documents/Perso/2015/CVI/CVI & MSVC 2/src/TestCVIMSVC.c"
+Tab 0005 = "/c/Users/frbaucop/Source/Repos/StateMachine/src/main.c"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
